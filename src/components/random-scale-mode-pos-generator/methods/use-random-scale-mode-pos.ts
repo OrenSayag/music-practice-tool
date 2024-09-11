@@ -9,6 +9,23 @@ const positions = Array.from({length: 7}).map((_, i) => i+1);
 
 type Position = typeof positions[number];
 
+const keys = [
+    'A',
+    'A#',
+    'B',
+    'C',
+    'C#',
+    'D',
+    'D#',
+    'E',
+    'F',
+    'F#',
+    'G',
+    'G#',
+];
+
+type Key = typeof keys[number];
+
 const scaleModesDictionary: Record<Scale, Mode[]> = {
     Major: [{
         name: "Ionian",
@@ -38,6 +55,7 @@ export type ScaleModPos = {
     scale: Scale;
     mode: Mode;
     position: Position;
+    key: Key;
 }
 
 export const useRandomScaleModePos = () => {
@@ -47,6 +65,7 @@ export const useRandomScaleModePos = () => {
             scale: "Major",
             mode: randomItemFromArray(scaleModesDictionary["Major"]),
             position:randomItemFromArray(positions),
+            key:randomItemFromArray(keys),
         }
         setRes(res)
     }

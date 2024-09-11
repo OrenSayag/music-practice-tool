@@ -9,6 +9,7 @@ interface Props extends ComponentPropsWithoutRef<'div'> {
 
 const tableHeaders = [
     'Scale',
+    'Key',
     'Position',
     'Mode',
 ]
@@ -36,6 +37,11 @@ export const RandomScaleModePosGenerator: FC<Props> = ({ className, ...props }) 
                       className={cellCn}
                   >
                       {res.scale}
+                  </th>
+                  <th
+                      className={cellCn}
+                  >
+                      {res.key}
                   </th>
                   <th
                       className={cellCn}
