@@ -7,3 +7,5 @@ music-practice-tool - app that provides tools for practicing instruments.
 Current:
 
 Button to return random mode in the major scale, random key, and random position (1-7 based on CAGED positions).
+
+![preview](./docs/img/preview.png)
